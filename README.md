@@ -10,3 +10,14 @@
 ├── package.json
 
 ```
+
+## How it work in internal flow:
+
+```
+External API (jsonplaceholder)
+        ↓  POST /fetch
+   axios.get(url)
+        ↓
+   items.json  ←→  CRUD routes (GET / POST / PUT / DELETE)
+        ↓
+   JSON response to client
